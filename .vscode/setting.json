@@ -1,0 +1,8 @@
+{
+    "workbench.editor.enablePreview": false,
+    "react-native": {
+        "packager": {
+        "port": 8081
+        }
+        }
+}
