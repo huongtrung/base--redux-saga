@@ -1,11 +1,15 @@
-import { GET_PAGE_LIST } from '../../constants';
-
-export default function(state, action = {}) {
+export default function (state, action = {}) {
     switch (action.type) {
-        case GET_PAGE_LIST:
+        case 'INCREASE_COUNTER_ASYNC': {
             return state.withMutations(state =>
-                state.set("pageList", action.pageList))
-        default:
+                state.set("counter", state.get("counter") + action.value))
+        }
+        case 'DECREASE_COUNTER': {
+            return state.withMutations(state =>
+                state.set("counter", state.get("counter") - action.value))
+        }
+        default: {
             return state;
+        }
     }
 }
